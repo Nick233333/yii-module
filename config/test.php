@@ -22,7 +22,11 @@ return [
             'basePath' => __DIR__ . '/../web/assets',
         ],
         'urlManager' => [
-            'showScriptName' => true,
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'suffix' => '.html',
+            'rules' => [
+            ],
         ],
         'user' => [
             'identityClass' => 'app\models\User',
