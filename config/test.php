@@ -12,7 +12,8 @@ return [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'language' => 'en-US',
+    'language' => 'zh-CN',
+    "timezone"  =>  "Asia/Shanghai",
     'components' => [
         'db' => $db,
         'mailer' => [
@@ -27,6 +28,9 @@ return [
             'suffix' => '.html',
             'rules' => [
             ],
+        ],
+        'errorHandler' => [
+            'errorAction' => 'error/error',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
