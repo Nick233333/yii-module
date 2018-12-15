@@ -8,6 +8,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'language' => 'zh-CN',
     "timezone"  =>  "Asia/Shanghai",
+    'defaultRoute' => 'site/index' ,
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -51,6 +52,7 @@ $config = [
             'showScriptName' => false,
             'suffix' => '.html',
             'rules' => [
+
             ],
         ],
         

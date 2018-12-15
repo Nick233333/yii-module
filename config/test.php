@@ -14,6 +14,7 @@ return [
     ],
     'language' => 'zh-CN',
     "timezone"  =>  "Asia/Shanghai",
+    'defaultRoute' => 'site/index', 
     'components' => [
         'db' => $db,
         'mailer' => [
