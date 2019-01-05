@@ -8,6 +8,6 @@ class ErrorController extends Controller
 {
     public function actionError()
     {
-        return 'error';
+        return '出错了';
     }
 }
