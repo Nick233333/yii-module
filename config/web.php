@@ -78,7 +78,7 @@ $config = [
             'enableStrictParsing' => false,
             'suffix' => '',
             'rules' => [
-                // '/' => 'index/default',
+                '/' => 'index/default',
                 '/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 "/<module:\w+>/<controller:\w+>/<action:\w+>" => "<module>/<controller>/<action>"
             ],
