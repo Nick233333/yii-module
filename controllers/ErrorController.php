@@ -10,4 +10,9 @@ class ErrorController extends Controller
     {
         return '出错了';
     }
+
+    public function actionOffline()
+    {
+        return 'offline';
+    }
 }

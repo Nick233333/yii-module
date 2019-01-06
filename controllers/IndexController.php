@@ -10,4 +10,9 @@ class IndexController extends Controller
     {
         return 'index->index';
     }
+
+    public function actionDefault()
+    {
+        return 'default';
+    }
 }

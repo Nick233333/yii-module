@@ -7,8 +7,9 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'language' => 'zh-CN',
-    "timezone"  =>  "Asia/Shanghai",
-    'defaultRoute' => 'site/index' ,
+    "timezone" => "Asia/Shanghai",
+    'defaultRoute' => 'index/index',
+    // 'catchAll' => ['error/offline'],
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -17,6 +18,15 @@ $config = [
     'modules' => [
         'admin'=>[
             'class'=>'app\modules\admin\AdminModule',
+            // 'layout' => 'main',
+            // 'params' => ['name' => 'nick'],
+            // 'id' => 'admin',
+            // 'defaultRoute' => "index/index",
+            // 'version' => "1.0",
+            // 'controllerNamespace' => '',
+            // 'controllerMap' => [
+                
+            // ]
         ],
         'api'=>[
             'class'=>'app\modules\api\ApiModule',
@@ -42,7 +52,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'error/error',
+            // 'errorAction' => 'error/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -65,9 +75,12 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            // 'suffix' => '.html',
+            'enableStrictParsing' => false,
+            'suffix' => '',
             'rules' => [
-
+                // '/' => 'index/default',
+                '/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                "/<module:\w+>/<controller:\w+>/<action:\w+>" => "<module>/<controller>/<action>"
             ],
         ],
         
