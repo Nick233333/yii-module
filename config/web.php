@@ -25,8 +25,16 @@ $config = [
             // 'version' => "1.0",
             // 'controllerNamespace' => '',
             // 'controllerMap' => [
-                
-            // ]
+            // ]  
+            'components'=>[
+                'Test' => [
+                    'class' => 'app\modules\admin\components\Test',
+                    'terry' => 'test',
+                ],
+            ],
+            'params' => [
+                'name' => 'abc',
+            ],
         ],
         'api'=>[
             'class'=>'app\modules\api\ApiModule',
