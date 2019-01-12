@@ -4,6 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use yii\web\Controller;
+use app\modules\admin\components\User;
 
 class DefaultController extends Controller
 {
@@ -16,5 +17,7 @@ class DefaultController extends Controller
     {
         $module = Yii::$app->controller->module;
         $module->Test->index();
+        $user = new User();
+        $user->index();
     }
 }

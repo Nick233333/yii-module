@@ -13,11 +13,8 @@ class Test extends Component
 
     public function index()
     {
-        // $module_param_water = Yii::$app->controller->module->params['water'];
-        // echo $module_param_water;
-        echo $this->terry;
-        echo Yii::$app->controller->module->params['terry'];
-        echo Yii::$app->controller->module->params['path'];
+        echo '<br/>Test Component->'.$this->terry;
+        echo '<br/>Test Component->'.Yii::$app->controller->module->params['name'];
     }
  
 }
