@@ -1,17 +1,19 @@
 {
-    "name": "yiisoft/yii2-app-basic",
+    "name": "nick233333/yii-basic-template",
     "description": "Yii 2 Basic Project Template",
     "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "homepage": "https://github.com/nick233333/yii-basic-template",
     "type": "project",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
+        "issues": "https://github.com/nick233333/yii-basic-template/issues",
+        "source": "https://github.com/nick233333/yii-basic-template"
     },
+    "authors": [
+        {
+            "name": "Nick",
+        }
+    ],
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
