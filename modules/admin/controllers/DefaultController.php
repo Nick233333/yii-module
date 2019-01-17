@@ -7,9 +7,7 @@ use yii\web\Controller;
 use app\modules\admin\components\User;
 use yii\validators\EmailValidator;
 use yii\validators\UrlValidator;
-use yii\validators\ImageValidator;
 use yii\validators\IpValidator;
-use yii\validators\DateValidator;
 
 class DefaultController extends Controller
 {
@@ -53,20 +51,5 @@ class DefaultController extends Controller
             echo $error;
         }
 
-        $image = '6811_1512137725.jpg';
-        $validator = new ImageValidator();
-        if ($validator->validate($image, $error)) {
-            echo '有效的 Image 图片。<br>';
-        } else {
-            echo $error;
-        }
-
-        $date = '2013-09-13';
-        $validator = new DateValidator();
-        if ($validator->validate($date, $error)) {
-            echo '有效的 Date 类型。<br>';
-        } else {
-            echo $error;
-        }
     }
 }
