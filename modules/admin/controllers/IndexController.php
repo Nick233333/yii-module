@@ -4,6 +4,8 @@ namespace app\modules\admin\controllers;
 
 use yii\web\Controller;
 use Yii;
+use yii\filters\Cors;
+use yii\helpers\ArrayHelper;
 
 class IndexController extends Controller
 {
@@ -42,9 +44,19 @@ class IndexController extends Controller
     //     return true;
     // }
 
-    public function actionTest()
+    public function behaviors()
     {
-        return Yii::$app->request->post('name', '111');
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        return ArrayHelper::merge([
+            [
+                'class' => Cors::className(),
+            ],
+        ], parent::behaviors());
+    }
+
+    public function actionApiJson()
+    {
+        return ['code' => 200, 'message' => 'ok', 'data' => []];
     }
 }
 
