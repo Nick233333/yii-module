@@ -14,6 +14,7 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@domain' => 'https://wp.hellocode.name'
     ],
     'modules' => [
         'admin'=>[
@@ -25,7 +26,7 @@ $config = [
             // 'version' => "1.0",
             // 'controllerNamespace' => '',
             // 'controllerMap' => [
-            // ]  
+            // ]
             'components'=>[
                 'Test' => [
                     'class' => 'app\modules\admin\components\Test',
@@ -83,7 +84,7 @@ $config = [
             ],
         ],
         'db' => $db,
-        
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -95,7 +96,7 @@ $config = [
                 "/<module:\w+>/<controller:\w+>/<action:\w+>" => "<module>/<controller>/<action>"
             ],
         ],
-        
+
     ],
     'params' => $params,
 ];

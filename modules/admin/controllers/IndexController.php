@@ -46,7 +46,7 @@ class IndexController extends Controller
 
     public function behaviors()
     {
-        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        // Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         return ArrayHelper::merge([
             [
                 'class' => Cors::className(),
@@ -57,6 +57,24 @@ class IndexController extends Controller
     public function actionApiJson()
     {
         return ['code' => 200, 'message' => 'ok', 'data' => []];
+    }
+
+    public function actionAliasList()
+    {
+        // 预定义
+        echo Yii::getAlias('@yii');
+        echo Yii::getAlias('@app');
+        echo Yii::getAlias('@runtime');
+        echo Yii::getAlias('@webroot');
+        echo Yii::getAlias('@web');
+        echo Yii::getAlias('@vendor');
+        echo Yii::getAlias('@bower');
+        echo Yii::getAlias('@npm');
+        // 自定义
+        echo Yii::getAlias('@domain');
+        
+        Yii::setAlias('@upload', Yii::getAlias('@app').'/web/upload/');
+        echo Yii::getAlias('@upload');
     }
 }
 
