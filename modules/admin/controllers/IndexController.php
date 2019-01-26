@@ -96,6 +96,19 @@ class IndexController extends Controller
         // echo Url::previous();//上一次请求的url
 
     }
+
+    public function actionLog()
+    {
+
+        Yii::trace('trace trace trace trace trace', __METHOD__);
+        Yii::info('info info info info info', __METHOD__);
+        Yii::warning('warning warning warning warning warning', __METHOD__);
+        Yii::error('error error error error', __METHOD__);
+
+
+
+
+    }
 }
 
 
