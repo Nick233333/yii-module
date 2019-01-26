@@ -6,6 +6,7 @@ use yii\web\Controller;
 use Yii;
 use yii\filters\Cors;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
 
 class IndexController extends Controller
 {
@@ -72,9 +73,28 @@ class IndexController extends Controller
         echo Yii::getAlias('@npm');
         // 自定义
         echo Yii::getAlias('@domain');
-        
+
         Yii::setAlias('@upload', Yii::getAlias('@app').'/web/upload/');
         echo Yii::getAlias('@upload');
+    }
+
+    public function actionUrlList()
+    {
+        echo Url::to();
+        // echo Url::to(['']);
+        // echo Url::to(['index']);
+        // echo Url::to(['/index/index']);
+        // echo Url::to(['/admin/index/index']);
+        // echo Url::to(['/admin/index/index', 'id' => 100]);
+        // echo Url::to(['index', 'id' => 100, 'name' => 'nick','#' => 'content'],true);
+        // echo Url::to(['index', 'id' => 100, 'name' => 'nick','#' => 'content'],'https');
+        // echo Url::to('/images/logo.gif', true);
+        // echo Url::home();
+        // echo Url::base();
+        // echo Url::canonical();//当前请求完整url
+        // Url::remember();//记住当前请求url，不带域名
+        // echo Url::previous();//上一次请求的url
+
     }
 }
 
