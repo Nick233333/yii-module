@@ -13,37 +13,59 @@ class IndexController extends Controller
     public $defaultAction = 'home';
     public $enableCsrfValidation = false;
 
-    // public function actionHome()
-    // {
-    //     echo __METHOD__;
-    //     echo '<br>';
-    // }
-    //
-    // public function init()
-    // {
-    //     echo __METHOD__;
-    //     echo '<br>';
-    // }
-    //
-    // public function actionIndex()
-    // {
-    //     echo __METHOD__;
-    //     echo '<br>';
-    // }
-    //
-    // public function beforeAction($action)
-    // {
-    //     echo __METHOD__;
-    //     echo '<br>';
-    //     return true;
-    // }
-    //
-    // public function afterAction($action, $result)
-    // {
-    //     echo __METHOD__;
-    //     echo '<br>';
-    //     return true;
-    // }
+    public function actionHome()
+    {
+        echo __METHOD__;
+        echo '<br>';
+    }
+
+    public function init()
+    {
+        echo __METHOD__;
+        echo '<br>';
+    }
+
+    public function run($route, $params = [])
+    {
+        echo __METHOD__;
+        echo '<br>';
+        return parent::run($route, $params);
+    }
+
+    public function actionIndex()
+    {
+        echo __METHOD__;
+        echo '<br>';
+    }
+
+    public function beforeAction($action)
+    {
+        echo __METHOD__;
+        echo '<br>';
+        return true;
+    }
+
+    public function afterAction($action, $result)
+    {
+        echo __METHOD__;
+        echo '<br>';
+        return true;
+    }
+
+    public function createAction($id)
+    {
+        echo __METHOD__;
+        echo '<br>';
+        return parent::createAction($id);
+    }
+
+    public function runAction($id, $params = [])
+    {
+        echo __METHOD__;
+        echo '<br>';
+        return parent::runAction($id, $params);
+    }
+
 
     public function behaviors()
     {
@@ -74,7 +96,7 @@ class IndexController extends Controller
         // 自定义
         echo Yii::getAlias('@domain');
 
-        Yii::setAlias('@upload', Yii::getAlias('@app').'/web/upload/');
+        Yii::setAlias('@upload', Yii::getAlias('@app') . '/web/upload/');
         echo Yii::getAlias('@upload');
     }
 
@@ -99,16 +121,12 @@ class IndexController extends Controller
 
     public function actionLog()
     {
-
         Yii::trace('trace trace trace trace trace', __METHOD__);
         Yii::info('info info info info info', __METHOD__);
         Yii::warning('warning warning warning warning warning', __METHOD__);
         Yii::error('error error error error', __METHOD__);
-
-
-
-
     }
+
 }
 
 
