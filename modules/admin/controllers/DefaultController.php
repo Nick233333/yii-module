@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 namespace app\modules\admin\controllers;
 
@@ -13,6 +13,8 @@ class DefaultController extends Controller
 {
     public function actionIndex()
     {
+        // var_dump(\Yii::$app->controller->module->components);die;
+        var_dump(\Yii::$app->controller->module->params);die;
         return 'admin default index';
     }
 
