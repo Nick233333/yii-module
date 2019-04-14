@@ -1,20 +1,20 @@
 {
-    "name": "nick233333/yii-basic-template",
-    "description": "Yii 2 Basic Project Template",
+    "name": "nick233333/yii-module",
+    "description": "Yii-module Project Template",
     "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "https://github.com/nick233333/yii-basic-template",
+    "homepage": "https://github.com/nick233333/yii-module",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/nick233333/yii-basic-template/issues",
-        "source": "https://github.com/nick233333/yii-basic-template"
+        "issues": "https://github.com/nick233333/yii-module/issues",
+        "source": "https://github.com/nick233333/yii-module"
     },
     "authors": [
         {
             "name": "Nick"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.14",
